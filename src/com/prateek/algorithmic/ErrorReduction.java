@@ -12,7 +12,7 @@ public class ErrorReduction <T> {
     private ErrorReduction () {}
 
     public ErrorReduction(List<T> arrayA, List<T> arrayB, Integer k1, Integer k2) throws Exception {
-        if (arrayA.size() != arrayB.size()) {
+        if (arrayA == null || arrayB == null || arrayA.size() != arrayB.size()) {
             throw new Exception("This array list is not same");
         }
         this.arrayA = (List<Integer>) arrayA;
